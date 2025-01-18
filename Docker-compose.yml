@@ -4,7 +4,7 @@ services:
   flask-app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Backend_app/Dockerfile
     ports:
       - "5000:5000"
     networks:
@@ -17,7 +17,7 @@ services:
   mysql-db:
     build:
       context: .
-      dockerfile: Dockerfile.mysql
+      dockerfile: ./database_app/Dockerfile.mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: transactions_db
